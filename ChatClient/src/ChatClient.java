@@ -82,12 +82,24 @@ public class ChatClient extends JFrame {
         Container c = getContentPane();
         c.setLayout(new FlowLayout());
         c.add(lblPesan);
+        Box box = Box.createVerticalBox();
+
+        Label lNama = new Label("Nama mu");
+        Label lKelas = new Label("Kelas mu");
+
+        box.add(lNama);
+        box.add(lKelas);
+
         c.add(taPesan);
         c.add(lblBlasan);
         c.add(taBlasan);
         c.add(btnOpen);
+
         c.add(btnSend);
         c.add(btnClose);
+
+        c.add(box);
+
         
         btnOpen.addActionListener(new ActionListener() {
                   public void actionPerformed(ActionEvent evt) {
@@ -105,6 +117,10 @@ public class ChatClient extends JFrame {
                 closeConnection();
             }
         });
+        setSize(500, 300);
+        setMinimumSize(new Dimension(500, 300));
+        setMaximumSize(new Dimension(500, 300));
+        setResizable(false);
     }
     public  static void main(String[] args) {
         ChatClient klien = new ChatClient();

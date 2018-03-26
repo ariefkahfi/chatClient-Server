@@ -49,13 +49,22 @@ public class ChatServer extends JFrame{
 	public ChatServer()throws IOException {
 		container = getContentPane();
 		container.setLayout(new FlowLayout());
+		Box box = Box.createVerticalBox();
+
+        Label lNama = new Label("Nama mu");
+        Label lKelas = new Label("Kelas mu");
+
+        box.add(lNama);
+        box.add(lKelas);
+
 		container.add(labelPesan);
 		container.add(textPesan);
 		container.add(labelBalas);
 		container.add(textBalas);
 		container.add(send);
 		container.add(close);
-		
+		container.add(box);
+
 		send.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
@@ -69,6 +78,10 @@ public class ChatServer extends JFrame{
 				closeConnection();
 			}
 		});
+		setSize(550, 300);
+        setMinimumSize(new Dimension(550, 300));
+        setMaximumSize(new Dimension(550, 300));
+        setResizable(false);
 	}
 	public void getConnection()throws IOException {
 		socketServer = new ServerSocket(2000);
