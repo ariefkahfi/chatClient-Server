@@ -84,15 +84,19 @@ public class ChatClient extends JFrame {
         c.add(lblPesan);
         Box box = Box.createVerticalBox();
         Box photoBox = Box.createVerticalBox();
+        // JPanel panelPhoto = new JPanel();
+        // panelPhoto.setLayout(new BorderLayout());
 
         Label lNama = new Label("Nama mu");
         Label lKelas = new Label("Kelas mu");
 
         JLabel labelPhoto = new JLabel();
-        ImageIcon img = new ImageIcon("images/image1.png");
-        labelPhoto.setIcon(img);
+        ImageIcon img = new ImageIcon("my-photo1.jpeg");
+        Image getImage = img.getImage();
+        Image scaledImage = getImage.getScaledInstance(240, 240, Image.SCALE_DEFAULT);
+        labelPhoto.setIcon(new ImageIcon(scaledImage));
     
-        photoBox.add(labelPhoto);
+        photoBox.add(labelPhoto,BorderLayout.WEST);
 
         box.add(lNama);
         box.add(lKelas);
@@ -106,6 +110,8 @@ public class ChatClient extends JFrame {
         c.add(btnClose);
 
         c.add(box);
+
+        // c.add(panelPhoto);
         c.add(photoBox);
         
         btnOpen.addActionListener(new ActionListener() {
@@ -124,9 +130,9 @@ public class ChatClient extends JFrame {
                 closeConnection();
             }
         });
-        setSize(500, 400);
-        setMinimumSize(new Dimension(500, 400));
-        setMaximumSize(new Dimension(500, 400));
+        setSize(500, 550);
+        setMinimumSize(new Dimension(500, 550));
+        setMaximumSize(new Dimension(500, 550));
         setResizable(false);
     }
     public  static void main(String[] args) {
