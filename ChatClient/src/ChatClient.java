@@ -87,8 +87,8 @@ public class ChatClient extends JFrame {
         // JPanel panelPhoto = new JPanel();
         // panelPhoto.setLayout(new BorderLayout());
 
-        Label lNama = new Label("Nama mu");
-        Label lKelas = new Label("Kelas mu");
+        Label lNama = new Label("Arief al-Kahfi");
+        Label lKelas = new Label("4CB");
 
         JLabel labelPhoto = new JLabel();
         ImageIcon img = new ImageIcon("my-photo1.jpeg");
@@ -96,7 +96,7 @@ public class ChatClient extends JFrame {
         Image scaledImage = getImage.getScaledInstance(240, 240, Image.SCALE_DEFAULT);
         labelPhoto.setIcon(new ImageIcon(scaledImage));
     
-        photoBox.add(labelPhoto,BorderLayout.WEST);
+        photoBox.add(labelPhoto);
 
         box.add(lNama);
         box.add(lKelas);

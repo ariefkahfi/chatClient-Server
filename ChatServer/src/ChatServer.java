@@ -51,8 +51,8 @@ public class ChatServer extends JFrame{
 		container.setLayout(new FlowLayout());
 		Box box = Box.createVerticalBox();
 
-        Label lNama = new Label("Nama mu");
-        Label lKelas = new Label("Kelas mu");
+        Label lNama = new Label("Arief al-kahfi");
+        Label lKelas = new Label("4CB");
 
         box.add(lNama);
         box.add(lKelas);
