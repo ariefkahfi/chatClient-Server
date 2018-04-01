@@ -1,3 +1,12 @@
+
+# ignore .idea/
+
 .idea/
 *.class
 *.jpeg
+
+# ignore .iml out/
+
+*.iml
+out/
+
